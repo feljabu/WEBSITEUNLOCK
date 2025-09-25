@@ -36,7 +36,7 @@ const Header = () => {
         isScrolled ? 'bg-foreground/95 backdrop-blur-md shadow-lg' : 'bg-foreground'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
@@ -47,7 +47,7 @@ const Header = () => {
             <img 
               src="/logo.png" 
               alt="The Unlock - Unleashing Potential" 
-              className="h-12"
+              className="h-16"
             />
           </div>
 
