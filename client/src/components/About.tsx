@@ -9,12 +9,12 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Section */}
           <div className="flex justify-center lg:justify-start">
-            <Card className="overflow-hidden hover-elevate active-elevate-2 shadow-2xl max-w-md mx-auto">
+            <Card className="overflow-hidden hover-elevate active-elevate-2 shadow-2xl max-w-lg mx-auto">
               <div className="relative">
                 <img 
-                  src="/about-tech.png" 
+                  src="/about-ai-growth.png" 
                   alt="AI transformation and business innovation" 
-                  className="w-full h-[28rem] object-cover"
+                  className="w-full h-[32rem] object-cover"
                   data-testid="img-about"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
