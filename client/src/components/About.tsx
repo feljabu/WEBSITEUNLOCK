@@ -36,7 +36,7 @@ const About = () => {
               </h2>
             </div>
 
-            <div className="prose prose-lg max-w-none">
+            <div className="prose max-w-none">
               <div className="text-muted-foreground leading-relaxed space-y-6">
                 <p>
                   Your board wants AI results. Your competitors are moving faster. Every vendor promises transformation 
