@@ -30,9 +30,9 @@ const Hero = () => {
 
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Transform Your{' '}
+          Unlock{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-            Workflows
+            Game-Changing Efficiency
           </span>{' '}
           with AI Agents
         </h1>
