@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import executiveImage from '@assets/generated_images/Professional_executive_headshot_7d8e21c4.png';
+const felipeImage = '/attached_assets/image_1758782820022.png';
 
 const About = () => {
   return (
@@ -12,10 +12,10 @@ const About = () => {
             <Card className="overflow-hidden hover-elevate active-elevate-2 shadow-2xl">
               <div className="relative">
                 <img 
-                  src={executiveImage} 
-                  alt="CEO of The Unlock" 
+                  src={felipeImage} 
+                  alt="Felipe Jara presenting" 
                   className="w-full h-auto max-w-md object-cover"
-                  data-testid="img-ceo"
+                  data-testid="img-felipe"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
               </div>
@@ -29,9 +29,9 @@ const About = () => {
                 Our Story
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Why We Built{' '}
+                Why We Do{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-                  The Unlock
+                  This Work
                 </span>
               </h2>
             </div>
@@ -39,49 +39,31 @@ const About = () => {
             <div className="prose prose-lg max-w-none">
               <div className="text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  After witnessing countless organizations struggle with outdated workflows and manual processes, 
-                  I founded The Unlock with a singular mission: to democratize access to enterprise-grade AI solutions 
-                  that deliver immediate, measurable impact.
+                  Your board wants AI results. Your competitors are moving faster. Every vendor promises transformation 
+                  but delivers strategy documents or out-of-the-box solutions that don't realise the ROI.
                 </p>
                 
                 <p>
-                  Having spent over 15 years in enterprise technology consulting, I've seen firsthand how the right 
-                  AI implementation can transform not just efficiency metrics, but entire business cultures. The problem 
-                  wasn't lack of technology—it was the gap between cutting-edge AI capabilities and practical business application.
+                  Here's what I learned after years in enterprise consulting: even large companies with massive budgets 
+                  were struggling to keep up with AI's pace. Traditional methodologies of comprehensive analysis weren't 
+                  moving as fast as the technology itself. While teams were still analysing, AI capabilities were evolving, 
+                  competitors were deploying, and opportunities were disappearing.
                 </p>
                 
                 <p>
-                  The Unlock bridges that gap. We don't just implement AI; we architect intelligent ecosystems that grow 
-                  with your business, adapt to your challenges, and unlock potential you didn't know existed. Our approach 
-                  combines deep technical expertise with strategic business acumen to deliver solutions that work in the real world.
+                  Real transformation happens when AI becomes embedded in your business processes, with your users designing 
+                  the new AI-enabled workflows. Instead of over-analysing, you need quick pilots and agile scaling.
                 </p>
                 
-                <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-r-lg mt-8">
-                  <p className="text-card-foreground font-medium italic">
-                    "Every business deserves access to AI that doesn't just automate tasks, 
-                    but fundamentally transforms how work gets done. That's the unlock we provide."
-                  </p>
-                  <div className="mt-4">
-                    <p className="font-semibold text-primary">Sarah Chen</p>
-                    <p className="text-sm text-muted-foreground">Founder & CEO, The Unlock</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-1">200+</div>
-                <div className="text-sm text-muted-foreground">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Enterprise Clients</div>
+                <p>
+                  That insight drove me to focus on building actual solutions. Businesses deserve working agents that deliver 
+                  measurable efficiency gains, not more analysis paralysis.
+                </p>
+                
+                <p>
+                  We exist to give you enterprise-level AI capabilities without enterprise-level complexity or cost. 
+                  Just working agents transforming your highest-value workflows in 8 weeks.
+                </p>
               </div>
             </div>
           </div>

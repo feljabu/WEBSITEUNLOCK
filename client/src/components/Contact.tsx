@@ -46,28 +46,16 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: Phone,
-      title: 'Phone',
-      detail: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
       icon: Mail,
       title: 'Email',
-      detail: 'hello@theunlock.ai',
+      detail: 'felipe@theunlock.com.au',
       description: '24/7 support response'
     },
     {
       icon: MapPin,
       title: 'Location',
-      detail: 'San Francisco, CA',
+      detail: 'Australia',
       description: 'Global remote team'
-    },
-    {
-      icon: Clock,
-      title: 'Response Time',
-      detail: '< 2 hours',
-      description: 'Average first response'
     }
   ];
 
@@ -185,6 +173,27 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Contact Details */}
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20 hover-elevate">
+                <CardContent className="p-6 text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mb-4">
+                    <Mail size={24} className="text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-primary-foreground mb-1">LinkedIn</h4>
+                  <a 
+                    href="https://www.linkedin.com/company/theunlockai/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium mb-1 hover:underline"
+                  >
+                    @theunlockai
+                  </a>
+                  <p className="text-sm text-primary-foreground/70">Connect with us</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Additional Contact Info */}
             <div className="grid sm:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
@@ -228,7 +237,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Strategic Assessment</p>
-                      <p className="text-sm opacity-80">Our experts will analyze your workflows and identify opportunities.</p>
+                      <p className="text-sm opacity-80">We'll analyse your specific opportunities and challenges.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -237,7 +246,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Custom Proposal</p>
-                      <p className="text-sm opacity-80">You'll receive a tailored roadmap with clear ROI projections.</p>
+                      <p className="text-sm opacity-80">You'll receive a tailored roadmap with measurable outcomes.</p>
                     </div>
                   </div>
                 </div>

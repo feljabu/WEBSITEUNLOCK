@@ -6,29 +6,29 @@ const Process = () => {
   const processSteps = [
     {
       number: '01',
-      title: 'Discovery & Analysis',
-      description: 'We dive deep into your current workflows, identifying bottlenecks and opportunities for AI integration.',
+      title: 'Process Discovery',
+      description: 'We help you discover which processes are prime candidates for AI transformation through proven prioritization frameworks. Move beyond generic "AI enablement" to identify specific, high-value workflows.',
       icon: Search,
       color: 'text-primary'
     },
     {
       number: '02',
-      title: 'Strategy Development',
-      description: 'Our experts craft a tailored AI strategy aligned with your business objectives and technical requirements.',
+      title: 'Team Empowerment',
+      description: 'Transform your team into architects of their own agentic workflows. We provide governance frameworks, technical training, and ongoing coaching so your people can build agents independently.',
       icon: Lightbulb,
       color: 'text-primary'
     },
     {
       number: '03',
-      title: 'Implementation',
-      description: 'We deploy cutting-edge AI agents and automation systems with minimal disruption to your operations.',
+      title: 'Rapid Deployment',
+      description: 'Deploy custom AI agents that handle knowledge-intensive work in 8 weeks. Achieve 30% efficiency gains through proven delivery cycles, not months of analysis and planning.',
       icon: Cog,
       color: 'text-primary'
     },
     {
       number: '04',
-      title: 'Optimization',
-      description: 'Continuous monitoring and refinement ensure maximum ROI and performance from your AI investments.',
+      title: 'Flexible Engagement',
+      description: 'Choose your engagement model: we build agents for you, teach your team to build them, or start by building to prove value then transition to capability transfer. You control the level of independence.',
       icon: Rocket,
       color: 'text-primary'
     }
@@ -43,14 +43,14 @@ const Process = () => {
             Our Methodology
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Proven Process for{' '}
+            Our{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-              AI Success
+              Solution
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our systematic approach ensures seamless AI integration that delivers measurable results 
-            and sustainable competitive advantage.
+            We build working solutions while others are still analyzing. Transform your workflows with 
+            custom AI agents that deliver immediate, measurable impact.
           </p>
         </div>
 

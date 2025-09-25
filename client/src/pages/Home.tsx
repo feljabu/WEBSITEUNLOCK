@@ -1,9 +1,9 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Process from '@/components/Process';
-import Partnership from '@/components/Partnership';
 import About from '@/components/About';
 import Team from '@/components/Team';
+import PartnershipSection from '@/components/PartnershipSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -14,9 +14,9 @@ const Home = () => {
       <main>
         <Hero />
         <Process />
-        <Partnership />
         <About />
         <Team />
+        <PartnershipSection />
         <Contact />
       </main>
       <Footer />

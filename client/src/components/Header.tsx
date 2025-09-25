@@ -23,11 +23,11 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'Process', id: 'process' },
+    { label: 'How We Work', id: 'process' },
+    { label: 'Why We Exist', id: 'about' },
+    { label: 'Our Team', id: 'team' },
     { label: 'Partnership', id: 'partnership' },
-    { label: 'About', id: 'about' },
-    { label: 'Team', id: 'team' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Get Started', id: 'contact' },
   ];
 
   return (
@@ -40,11 +40,15 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
-            className="text-primary text-2xl font-bold cursor-pointer hover-elevate" 
+            className="cursor-pointer hover-elevate" 
             onClick={() => scrollToSection('hero')}
             data-testid="logo-link"
           >
-            The Unlock
+            <img 
+              src="/attached_assets/Screenshot 2025-09-24 at 4.51.11 pm_1758783103988.png" 
+              alt="The Unlock - Unleashing Potential" 
+              className="h-10"
+            />
           </div>
 
           {/* Desktop Navigation */}
