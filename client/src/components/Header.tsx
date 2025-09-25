@@ -47,7 +47,7 @@ const Header = () => {
             <img 
               src="/logo.png" 
               alt="The Unlock - Unleashing Potential" 
-              className="h-10"
+              className="h-12"
             />
           </div>
 
