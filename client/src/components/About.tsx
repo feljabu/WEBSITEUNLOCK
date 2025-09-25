@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-const felipeImage = '/attached_assets/image_1758782820022.png';
+import aboutImage from '@assets/generated_images/Hero_business_tech_background_b29af8eb.png';
 
 const About = () => {
   return (
@@ -12,10 +12,10 @@ const About = () => {
             <Card className="overflow-hidden hover-elevate active-elevate-2 shadow-2xl">
               <div className="relative">
                 <img 
-                  src={felipeImage} 
-                  alt="Felipe Jara presenting" 
+                  src={aboutImage} 
+                  alt="AI transformation and business innovation" 
                   className="w-full h-auto max-w-md object-cover"
-                  data-testid="img-felipe"
+                  data-testid="img-about"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
               </div>

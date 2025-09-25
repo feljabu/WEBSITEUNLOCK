@@ -20,7 +20,11 @@ const PartnershipSection = () => {
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             While The Unlock builds custom agents that transform specific workflows in 8 weeks, true organisational 
             AI transformation requires both intelligent automation AND workforce enablement. That's why we partner 
-            with <strong className="text-primary">Humanova</strong> - Australia's leading AI workforce transformation specialists.
+            with <strong className="text-primary">
+              <a href="https://www.humanova.com.au/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary/80">
+                Humanova
+              </a>
+            </strong> - Australia's leading AI workforce transformation specialists.
           </p>
         </div>
 

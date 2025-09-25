@@ -2,9 +2,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-const felipeImage = '/attached_assets/image_1758782820022.png';
-const seanImage = '/attached_assets/image_1758782834306.png';
-import joseImage from '@assets/generated_images/Team_member_portrait_two_b8b749f6.png';
+const felipeImage = '/attached_assets/Felipe Jara_1758783631332.jpeg';
+const seanImage = '/attached_assets/Sean_1758783697669.png';
+const joseImage = '/attached_assets/jose_1758783716598.jpeg';
 
 const Team = () => {
   const teamMembers = [
@@ -13,21 +13,24 @@ const Team = () => {
       role: 'AI Agent Strategist',
       image: felipeImage,
       bio: 'Felipe builds custom AI agents and multi-agent systems that deliver measurable ROI while enhancing human work. With deep technical experience across Deloitte, Accenture, and PwC, he specializes in creating autonomous agents that solve real business problems.',
-      expertise: ['AI Agents', 'Multi-Agent Systems', 'Enterprise Consulting', 'ROI Optimization']
+      expertise: ['AI Agents', 'Multi-Agent Systems', 'Enterprise Consulting', 'ROI Optimization'],
+      linkedin: 'https://www.linkedin.com/in/felipejarab/'
     },
     {
       name: 'Dr Sean Gallagher',
       role: 'AI Workforce Strategist (Humanova Partnership)',
       image: seanImage,
       bio: 'Sean is Australia\'s leading authority on AI workforce transformation and founder of Humanova. His research-driven approach helps mid-market companies achieve ambitious growth targets through AI-enabled workforces rather than traditional headcount increases.',
-      expertise: ['Workforce Transformation', 'AI Strategy', 'Change Management', 'Research']
+      expertise: ['Workforce Transformation', 'AI Strategy', 'Change Management', 'Research'],
+      linkedin: 'https://www.linkedin.com/in/seanhgallagher/'
     },
     {
       name: 'Jose Nunez',
       role: 'Tech Lead, AI Solutions',
       image: joseImage,
       bio: 'Jose brings over six years of frontend development experience from Atlassian. His expertise lies in building clean, scalable interfaces and crafting seamless user journeys. He focuses on bridging the gap between advanced AI capabilities and human-centered design.',
-      expertise: ['Frontend Development', 'User Experience', 'System Design', 'AI Integration']
+      expertise: ['Frontend Development', 'User Experience', 'System Design', 'AI Integration'],
+      linkedin: 'https://www.linkedin.com/in/jose-nunez/'
     }
   ];
 
@@ -95,27 +98,17 @@ const Team = () => {
                   ))}
                 </div>
 
-                {/* Contact Buttons */}
-                <div className="flex justify-center gap-3">
+                {/* LinkedIn Button */}
+                <div className="flex justify-center">
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    onClick={() => console.log(`LinkedIn clicked for ${member.name}`)}
+                    onClick={() => window.open(member.linkedin, '_blank')}
                     className="hover-elevate active-elevate-2"
                     data-testid={`button-linkedin-${index + 1}`}
                   >
                     <Linkedin size={16} className="mr-2" />
                     LinkedIn
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => console.log(`Email clicked for ${member.name}`)}
-                    className="hover-elevate active-elevate-2"
-                    data-testid={`button-email-${index + 1}`}
-                  >
-                    <Mail size={16} className="mr-2" />
-                    Contact
                   </Button>
                 </div>
               </CardContent>
