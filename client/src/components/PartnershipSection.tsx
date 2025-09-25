@@ -95,12 +95,7 @@ const PartnershipSection = () => {
                 continue innovating beyond our engagement.
               </p>
               
-              <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-r-lg">
-                <p className="text-card-foreground font-semibold text-lg">
-                  <strong className="text-primary">The Result:</strong> You get enterprise-level AI capabilities with the agility 
-                  to compete and evolve as AI technology advances - without analysis paralysis.
-                </p>
-              </div>
+              
             </div>
           </CardContent>
         </Card>
