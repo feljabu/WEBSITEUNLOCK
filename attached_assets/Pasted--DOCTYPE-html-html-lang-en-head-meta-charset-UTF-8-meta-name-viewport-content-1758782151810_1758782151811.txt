@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unlock - Transform Your Workflows with AI Agents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #111111;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #111111;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00a8b5;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #00d7e8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #111111 0%, #007982 100%);
+            color: #ffffff;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #00a8b5;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #00d7e8;
+            color: #111111;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 5rem 0;
+            background: #ffffff;
+        }
+
+        .process h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #111111;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 168, 181, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: #00a8b5;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: #007982;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .process-step p {
+            color: #111111;
+            opacity: 0.8;
+        }
+
+        /* Partnership Section */
+        .partnership {
+            background: #007982;
+            color: #ffffff;
+            padding: 5rem 0;
+        }
+
+        .partnership h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .partnership-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+
+        .partnership-side h3 {
+            color: #00d7e8;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .partnership-side ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .partnership-side li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .partnership-side li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00d7e8;
+            font-weight: bold;
+        }
+
+        .partnership-results {
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+
+        .partnership-results h3 {
+            color: #00d7e8;
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .result-stat {
+            text-align: center;
+            background: rgba(0, 215, 232, 0.1);
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            border-top: 3px solid #00d7e8;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00d7e8;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-detail {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .partnership-value {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 215, 232, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #00d7e8;
+        }
+
+        .partnership-value h3 {
+            color: #00d7e8;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .partnership-value p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .partnership-value p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Why Section */
+        .why-section {
+            background: #e6e6e6;
+            padding: 5rem 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .why-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-placeholder {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(135deg, #00a8b5, #00d7e8);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 168, 181, 0.3);
+        }
+
+        .image-placeholder span {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-placeholder small {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .why-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #111111;
+        }
+
+        .story {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #111111;
+            opacity: 0.9;
+            text-align: left;
+        }
+
+        .story p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 5rem 0;
+            background: #ffffff;
+        }
+
+        .team h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #111111;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 168, 181, 0.1);
+        }
+
+        .team-member h3 {
+            color: #00a8b5;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .role {
+            color: #007982;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-member p {
+            color: #111111;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #111111;
+            color: #ffffff;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #00d7e8;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #00a8b5;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #00d7e8;
+            color: #111111;
+        }
+
+        /* Footer */
+        footer {
+            background: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #007982;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .process-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .image-placeholder {
+                width: 250px;
+                height: 300px;
+            }
+
+            .partnership-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .partnership-intro,
+            .partnership-value {
+                padding: 0 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">THE UNLOCK</a>
+                <nav class="nav">
+                    <a href="#process">How We Work</a>
+                    <a href="#partnership">Partnership</a>
+                    <a href="#why">Why We Exist</a>
+                    <a href="#team">Our Team</a>
+                    <a href="#contact">Get Started</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform your workflows with custom AI agents</h1>
+            <p>We build working solutions while others are still analyzing</p>
+            <a href="#contact" class="cta-button">Ready to Move Beyond AI Theater?</a>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2>Our Solution</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Process Discovery</h3>
+                    <p>We help you discover which processes are prime candidates for AI transformation through proven prioritization frameworks. Move beyond generic "AI enablement" to identify specific, high-value workflows.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Team Empowerment</h3>
+                    <p>Transform your team into architects of their own agentic workflows. We provide governance frameworks, technical training, and ongoing coaching so your people can build agents independently.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Rapid Deployment</h3>
+                    <p>Deploy custom AI agents that handle knowledge-intensive work in 8 weeks. Achieve 30% efficiency gains through proven delivery cycles, not months of analysis and planning.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Flexible Engagement</h3>
+                    <p>Choose your engagement model: we build agents for you, teach your team to build them, or start by building to prove value then transition to capability transfer. You control the level of independence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section" id="why">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-image">
+                    <div class="image-placeholder">
+                        <span>Image: Felipe's Journey</span>
+                        <small>From consulting to AI democratization</small>
+                    </div>
+                </div>
+                <div class="why-content">
+                    <h2>Why We Do This Work</h2>
+                    <div class="story">
+                        <p>Your board wants AI results. Your competitors are moving faster. Every vendor promises transformation but delivers strategy documents or out-of-the-box solutions that don't realise the ROI.</p>
+                        
+                        <p>Here's what I learned after years in enterprise consulting: even large companies with massive budgets were struggling to keep up with AI's pace. Traditional methodologies of comprehensive analysis weren't moving as fast as the technology itself. While teams were still analysing, AI capabilities were evolving, competitors were deploying, and opportunities were disappearing.</p>
+                        
+                        <p>Real transformation happens when AI becomes embedded in your business processes, with your users designing the new AI-enabled workflows. Instead of over-analysing, you need quick pilots and agile scaling.</p>
+                        
+                        <p>That insight drove me to focus on building actual solutions. Businesses deserve working agents that deliver measurable efficiency gains, not more analysis paralysis.</p>
+                        
+                        <p>We exist to give you enterprise-level AI capabilities without enterprise-level complexity or cost. Just working agents transforming your highest-value workflows in 8 weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Felipe Jara</h3>
+                    <div class="role">AI Agent Strategist</div>
+                    <p>Felipe builds custom AI agents and multi-agent systems that deliver measurable ROI while enhancing human work. With deep technical experience across Deloitte, Accenture, and PwC, he specializes in creating autonomous agents that solve real business problems.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Dr Sean Gallagher</h3>
+                    <div class="role">AI Workforce Strategist (Humanova Partnership)</div>
+                    <p>Sean is Australia's leading authority on AI workforce transformation and founder of Humanova. His research-driven approach helps mid-market companies achieve ambitious growth targets through AI-enabled workforces rather than traditional headcount increases.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Jose Nunez</h3>
+                    <div class="role">Tech Lead, AI Solutions</div>
+                    <p>Jose brings over six years of frontend development experience from Atlassian. His expertise lies in building clean, scalable interfaces and crafting seamless user journeys. He focuses on bridging the gap between advanced AI capabilities and human-centered design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership" id="partnership">
+        <div class="container">
+            <h2>Complete AI Transformation Through Partnership</h2>
+            <div class="partnership-intro">
+                <p>While The Unlock builds custom agents that transform specific workflows in 8 weeks, true organisational AI transformation requires both intelligent automation AND workforce enablement. That's why we partner with <strong>Humanova</strong> - Australia's leading AI workforce transformation specialists.</p>
+            </div>
+            
+            <div class="partnership-grid">
+                <div class="partnership-side unlock-side">
+                    <h3>The Unlock Delivers</h3>
+                    <ul>
+                        <li>Custom AI agents for immediate efficiency gains</li>
+                        <li>Team empowerment to architect their own workflows</li>
+                        <li>8-week deployment cycles, not months of analysis</li>
+                        <li>Governance frameworks for sustainable scaling</li>
+                    </ul>
+                </div>
+                
+                <div class="partnership-side humanova-side">
+                    <h3>Humanova Delivers</h3>
+                    <ul>
+                        <li>Workforce AI enablement across all team members</li>
+                        <li>Evidence-based frameworks shaped for your business</li>
+                        <li>Leadership alignment and change management</li>
+                        <li>Daily AI adoption and capability building</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="partnership-value">
+                <h3>Why This Partnership is Essential</h3>
+                <p>Organisations need both <strong>intelligent agents</strong> (The Unlock) and <strong>empowered teams</strong> (Humanova). Custom agents deliver immediate workflow transformation, while workforce enablement ensures your entire team can collaborate effectively with AI and continue innovating beyond our engagement.</p>
+                
+                <p><strong>The Result:</strong> You get enterprise-level AI capabilities with the agility to compete and evolve as AI technology advances - without analysis paralysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Workflows?</h2>
+            <p>Let's talk about building AI agents that actually work for your business</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your workflow challenge</label>
+                    <textarea id="message" name="message" placeholder="What process would you like to transform with AI?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The Unlock. Unleashing Potential through AI Agent Transformation.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler (placeholder)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We\'ll be in touch soon.');
+        });
+    </script>
+</body>
+</html>

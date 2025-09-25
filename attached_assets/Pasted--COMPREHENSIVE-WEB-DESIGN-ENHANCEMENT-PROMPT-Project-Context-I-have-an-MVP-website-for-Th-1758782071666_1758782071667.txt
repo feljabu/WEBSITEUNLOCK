@@ -1,0 +1,55 @@
+**COMPREHENSIVE WEB DESIGN ENHANCEMENT PROMPT:**
+
+**Project Context:**
+I have an MVP website for "The Unlock" - an AI consulting company. I need you to transform this basic HTML/CSS into a professional, modern website that looks enterprise-ready.
+
+**Current Code:** [Insert our HTML here]
+
+**SPECIFIC ENHANCEMENT REQUIREMENTS:**
+
+**1. VISUAL DESIGN IMPROVEMENTS:**
+- Add professional hero section with background image/gradient
+- Implement subtle animations (fade-ins, hover effects, smooth transitions)
+- Add depth with strategic shadows and layering
+- Create visual hierarchy with improved typography scaling
+- Add professional icons for process steps and features
+
+**2. IMAGE INTEGRATION:**
+- Hero section: Professional business/tech background image
+- Why section: Professional headshot placeholder (300x400px)
+- Team section: Professional team member photos (circular, 200x200px)
+- Process section: Modern icons or illustrations for each step
+- Partnership section: Subtle background pattern or tech imagery
+
+**3. MODERN UI ELEMENTS:**
+- Smooth scroll navigation with active states
+- Interactive buttons with hover animations
+- Cards with subtle hover elevations
+- Professional form styling with focus states
+- Loading animations and micro-interactions
+
+**4. TECHNICAL ENHANCEMENTS:**
+- Optimize mobile responsiveness (especially partnership grid)
+- Add subtle parallax or scroll-triggered animations
+- Implement smooth transitions between sections
+- Add professional loading states
+- Ensure accessibility (contrast, focus states)
+
+**5. BRAND CONSISTENCY:**
+- Use color palette: #00a8b5, #ffffff, #111111, #00d7e8, #007982, #e6e6e6
+- Maintain professional B2B aesthetic
+- Ensure enterprise-level credibility
+
+**6. PERFORMANCE:**
+- Optimize images for web
+- Minimize CSS and ensure fast loading
+- Use efficient animations (CSS transforms over DOM manipulation)
+
+**OUTPUT REQUIREMENTS:**
+- Complete working website with all enhancements
+- Professional placeholder images that I can replace later
+- Modern, enterprise-ready appearance
+- Mobile-first responsive design
+- Fast loading and smooth interactions
+
+Make this look like a $50,000 enterprise consulting website, not an MVP.
