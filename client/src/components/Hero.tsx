@@ -39,7 +39,7 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
-          Unlock unprecedented efficiency and innovation in your business processes. 
+          Unlock game-changing efficiency and innovation in your business processes. 
           Our enterprise AI solutions deliver measurable results through intelligent automation.
         </p>
 
@@ -68,13 +68,13 @@ const Hero = () => {
 
         {/* Trust Indicators */}
         <div className="text-center opacity-80">
-          <p className="text-sm font-medium mb-2">Trusted by enterprise leaders</p>
+          <p className="text-sm font-medium mb-2">Moving beyond consulting theatre</p>
           <div className="flex items-center justify-center gap-8 text-xs">
-            <span>Fortune 500 Companies</span>
+            <span>Working Agents in 8 Weeks</span>
             <span className="text-primary">•</span>
-            <span>98% Success Rate</span>
+            <span>Team Empowerment</span>
             <span className="text-primary">•</span>
-            <span>24/7 Support</span>
+            <span>Partnership Approach</span>
           </div>
         </div>
       </div>
