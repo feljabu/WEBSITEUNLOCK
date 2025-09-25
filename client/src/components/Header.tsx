@@ -45,7 +45,7 @@ const Header = () => {
             data-testid="logo-link"
           >
             <img 
-              src="/attached_assets/logo_1758783743340.png" 
+              src="/logo.png" 
               alt="The Unlock - Unleashing Potential" 
               className="h-10"
             />

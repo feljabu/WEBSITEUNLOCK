@@ -49,7 +49,7 @@ const Process = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We build working solutions while others are still analyzing. Transform your workflows with 
+            We build working solutions while others are still analysing. Transform your workflows with 
             custom AI agents that deliver immediate, measurable impact.
           </p>
         </div>

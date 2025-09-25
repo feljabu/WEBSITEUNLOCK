@@ -2,9 +2,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-const felipeImage = '/attached_assets/Felipe Jara_1758783631332.jpeg';
-const seanImage = '/attached_assets/Sean_1758783697669.png';
-const joseImage = '/attached_assets/jose_1758783716598.jpeg';
+const felipeImage = '/team/felipe.jpeg';
+const seanImage = '/team/sean.png';
+const joseImage = '/team/jose.jpeg';
 
 const Team = () => {
   const teamMembers = [
@@ -28,7 +28,7 @@ const Team = () => {
       name: 'Jose Nunez',
       role: 'Tech Lead, AI Solutions',
       image: joseImage,
-      bio: 'Jose brings over six years of frontend development experience from Atlassian. His expertise lies in building clean, scalable interfaces and crafting seamless user journeys. He focuses on bridging the gap between advanced AI capabilities and human-centered design.',
+      bio: 'Jose brings over six years of frontend development experience from Atlassian. His expertise lies in building clean, scalable interfaces and crafting seamless user journeys. He focuses on bridging the gap between advanced AI capabilities and human-centred design.',
       expertise: ['Frontend Development', 'User Experience', 'System Design', 'AI Integration'],
       linkedin: 'https://www.linkedin.com/in/jose-nunez/'
     }

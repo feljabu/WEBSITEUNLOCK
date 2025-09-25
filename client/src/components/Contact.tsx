@@ -75,7 +75,7 @@ const Contact = () => {
             Your Business?
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-            Let's discuss how AI can unlock your organization's potential. 
+            Let's discuss how AI can unlock your organisation's potential. 
             Schedule a consultation with our experts today.
           </p>
         </div>
