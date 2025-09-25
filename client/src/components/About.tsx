@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import aboutImage from '@assets/generated_images/Hero_business_tech_background_b29af8eb.png';
 
 const About = () => {
   return (
