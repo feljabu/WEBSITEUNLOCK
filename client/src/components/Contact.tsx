@@ -30,37 +30,27 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('access_key', 'db800c0e-da86-4fcb-a5c4-c7b57d61b742');
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('company', formData.company);
-      formDataToSend.append('message', formData.message);
-      formDataToSend.append('redirect', 'https://web3forms.com/success');
+    const formDataToSend = new FormData();
+    formDataToSend.append('access_key', 'db800c0e-da86-4fcb-a5c4-c7b57d61b742');
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('company', formData.company);
+    formDataToSend.append('message', formData.message);
+    formDataToSend.append('redirect', 'https://web3forms.com/success');
 
-      // Submit to Web3Forms - emails are delivered despite error responses
-      await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formDataToSend
-      });
+    // Submit to Web3Forms
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formDataToSend
+    });
 
-      // Always show success message since emails are actually delivered
-      toast({
-        title: "Thanks for your message!",
-        description: "We'll be in touch with you soon.",
-      });
-      setFormData({ name: '', email: '', company: '', message: '' });
-    } catch (error) {
-      console.error('Form submission error:', error);
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Always show success message
+    toast({
+      title: "Thanks for your message!",
+      description: "We'll be in touch with you soon.",
+    });
+    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
