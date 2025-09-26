@@ -55,7 +55,7 @@ const Process = () => {
         </div>
 
         {/* Process Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {processSteps.map((step, index) => {
             const IconComponent = step.icon;
             
@@ -65,26 +65,22 @@ const Process = () => {
                 className="relative hover-elevate active-elevate-2 transition-all duration-300 group border-card-border bg-card"
                 data-testid={`process-step-${index + 1}`}
               >
-                <CardContent className="p-8 text-center">
+                <CardContent className="p-6">
                   {/* Step Number */}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
                       {step.number}
                     </div>
-                  </div>
-
-                  {/* Icon */}
-                  <div className="mt-8 mb-6 flex justify-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      <IconComponent size={32} className={step.color} />
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                      <IconComponent size={20} className={step.color} />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold mb-4 text-card-foreground group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg font-semibold mb-3 text-card-foreground group-hover:text-primary transition-colors duration-300">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>
