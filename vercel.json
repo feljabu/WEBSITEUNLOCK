@@ -3,10 +3,5 @@
   "buildCommand": "cd client && npm install && npx vite build",
   "outputDirectory": "client/dist",
   "cleanUrls": true,
-  "trailingSlash": false,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "trailingSlash": false
 }
