@@ -30,44 +30,18 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
-      // Submit directly to Web3Forms (simple approach)
-      const formDataToSend = new FormData();
-      formDataToSend.append('access_key', 'db800c0e-da86-4fcb-a5c4-c7b57d61b742');
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('company', formData.company);
-      formDataToSend.append('message', formData.message);
-      formDataToSend.append('from_name', 'The Unlock Website');
-      formDataToSend.append('subject', `New Contact Form Submission from ${formData.name} - ${formData.company}`);
-      formDataToSend.append('replyto', formData.email);
-      
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formDataToSend
-      });
-      
-      const result = await response.json();
-      
-      if (result.success) {
-        toast({
-          title: "Message Sent!",
-          description: "We'll get back to you within 24 hours.",
-        });
-        setFormData({ name: '', email: '', company: '', message: '' });
-      } else {
-        throw new Error('Web3Forms submission failed');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
+    // todo: remove mock functionality - replace with actual API call
+    console.log('Form submitted:', formData);
+    
+    // Simulate API call
+    setTimeout(() => {
       toast({
-        title: "Error",
-        description: "Unable to send message. Please check your connection and try again.",
-        variant: "destructive",
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
       });
-    } finally {
+      setFormData({ name: '', email: '', company: '', message: '' });
       setIsSubmitting(false);
-    }
+    }, 1000);
   };
 
   const contactInfo = [
@@ -176,7 +150,6 @@ const Contact = () => {
                     data-testid="textarea-message"
                   />
                 </div>
-
 
                 <Button 
                   type="submit" 
