@@ -30,18 +30,40 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // todo: remove mock functionality - replace with actual API call
-    console.log('Form submitted:', formData);
-    
-    // Simulate API call
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you within 24 hours.",
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: '', email: '', company: '', message: '' });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: result.message || "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        toast({
+          title: "Error",
+          description: result.message || "There was an issue sending your message. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Unable to send message. Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
