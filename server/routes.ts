@@ -20,6 +20,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       formData.append('from_name', 'The Unlock Website');
       formData.append('subject', `New Contact Form Submission from ${validatedData.name} - ${validatedData.company}`);
       formData.append('replyto', validatedData.email);
+      // Honeypot spam protection
+      formData.append('botcheck', req.body.botcheck || false);
       
       // Send to Web3Forms
       const web3formsResponse = await fetch('https://api.web3forms.com/submit', {
