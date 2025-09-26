@@ -1,8 +1,0 @@
-server/
-shared/
-drizzle.config.ts
-tsconfig.json
-vite.config.ts
-vite.config.static.ts
-package.json
-package-lock.json
