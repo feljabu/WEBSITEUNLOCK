@@ -66,12 +66,17 @@ const Process = () => {
             return (
               <div 
                 key={index}
-                className={`relative flex items-center mb-16 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                className={`relative mb-12 ${isLeft ? 'md:flex md:flex-row' : 'md:flex md:flex-row-reverse'}`}
                 data-testid={`process-step-${index + 1}`}
               >
                 {/* Content */}
                 <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'}`}>
-                  <div className="group hover-elevate p-6 rounded-xl bg-card border border-card-border transition-all duration-300">
+                  <div className="group hover-elevate p-6 rounded-xl bg-card border border-card-border transition-all duration-300 relative">
+                    {/* Mobile Step Number */}
+                    <div className="md:hidden absolute -top-3 -left-3 w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg z-10">
+                      <span className="font-bold text-sm text-primary-foreground">{step.number}</span>
+                    </div>
+                    
                     <div className={`flex items-center gap-3 mb-4 ${isLeft ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                       <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                         <IconComponent size={24} className="text-primary" />
@@ -86,19 +91,9 @@ const Process = () => {
                   </div>
                 </div>
 
-                {/* Timeline Node */}
+                {/* Desktop Timeline Node */}
                 <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-card border-4 border-primary rounded-full items-center justify-center shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
                   <span className="font-bold text-lg text-primary">{step.number}</span>
-                </div>
-
-                {/* Mobile Layout */}
-                <div className="md:hidden flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold text-sm text-primary-foreground">{step.number}</span>
-                  </div>
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <IconComponent size={20} className="text-primary" />
-                  </div>
                 </div>
               </div>
             );
