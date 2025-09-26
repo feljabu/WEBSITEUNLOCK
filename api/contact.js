@@ -53,8 +53,6 @@ export default async function handler(req, res) {
     web3formsData.append('from_name', 'The Unlock Website');
     web3formsData.append('subject', `New Contact Form Submission from ${formData.name} - ${formData.company}`);
     web3formsData.append('replyto', formData.email);
-    // Honeypot spam protection
-    web3formsData.append('botcheck', formData.botcheck || false);
     
     // Send to Web3Forms
     const web3formsResponse = await fetch('https://api.web3forms.com/submit', {

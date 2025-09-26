@@ -13,19 +13,16 @@ const Contact = () => {
     name: '',
     email: '',
     company: '',
-    message: '',
-    botcheck: false // Honeypot spam protection
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
-    const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
-    
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: value
     }));
   };
 
@@ -54,7 +51,7 @@ const Contact = () => {
           title: "Message Sent!",
           description: result.message || "We'll get back to you within 24 hours.",
         });
-        setFormData({ name: '', email: '', company: '', message: '', botcheck: false });
+        setFormData({ name: '', email: '', company: '', message: '' });
       } else {
         toast({
           title: "Error",
@@ -181,17 +178,6 @@ const Contact = () => {
                   />
                 </div>
 
-                {/* Honeypot spam protection - hidden from users */}
-                <input 
-                  type="checkbox" 
-                  name="botcheck"
-                  checked={formData.botcheck}
-                  onChange={handleInputChange}
-                  className="hidden" 
-                  style={{ display: 'none' }}
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
 
                 <Button 
                   type="submit" 
