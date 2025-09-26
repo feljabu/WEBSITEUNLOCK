@@ -30,18 +30,57 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // todo: remove mock functionality - replace with actual API call
-    console.log('Form submitted:', formData);
-    
-    // Simulate API call
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you within 24 hours.",
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('access_key', 'db800c0e-da86-4fcb-a5c4-c7b57d61b742');
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('redirect', 'https://web3forms.com/success');
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       });
-      setFormData({ name: '', email: '', company: '', message: '' });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        const responseData = await response.json();
+        console.error('Web3Forms error:', responseData);
+        
+        let errorTitle = "Unable to Send Message";
+        let errorMessage = "Something went wrong. Please try again.";
+        
+        if (responseData?.message?.includes('domain TLD is blocked')) {
+          errorTitle = "Domain Not Authorized";
+          errorMessage = "This domain needs to be authorized for form submissions. Please contact us directly at felipe@theunlock.com.au";
+        } else if (responseData?.message) {
+          errorMessage = responseData.message;
+        }
+        
+        toast({
+          title: errorTitle,
+          description: errorMessage,
+          variant: "destructive"
+        });
+        return;
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
