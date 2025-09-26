@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "cd client && npm install && npx vite build",
+  "buildCommand": "cd client && npm install && npx vite build --config ../vite.config.vercel.ts",
   "outputDirectory": "client/dist",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "installCommand": "cd client && npm install"
 }
