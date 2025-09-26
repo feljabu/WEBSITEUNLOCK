@@ -255,7 +255,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium">Custom Proposal</p>
-                      <p className="text-sm opacity-80">You'll receive a tailored roadmap with measurable outcomes.</p>
+                      <p className="text-sm opacity-80">You'll receive a tailored roadmap with options to move forward.</p>
                     </div>
                   </div>
                 </div>
