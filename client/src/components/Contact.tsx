@@ -31,7 +31,12 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/contact', {
+      // For production, use relative path for Vercel deployment
+      const apiUrl = window.location.hostname.includes('vercel.app') 
+        ? '/api/contact'  // Vercel deployment
+        : '/api/contact'; // Replit development
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,6 +177,16 @@ const Contact = () => {
                     data-testid="textarea-message"
                   />
                 </div>
+
+                {/* Honeypot spam protection - hidden from users */}
+                <input 
+                  type="checkbox" 
+                  name="botcheck" 
+                  className="hidden" 
+                  style={{ display: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
 
                 <Button 
                   type="submit" 
