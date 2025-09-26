@@ -31,33 +31,64 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // For production, use relative path for Vercel deployment
-      const apiUrl = window.location.hostname.includes('vercel.app') 
-        ? '/api/contact'  // Vercel deployment
-        : '/api/contact'; // Replit development
+      // Check if we're on a static deployment (Vercel) or development (Replit)
+      const isStaticDeployment = window.location.hostname.includes('vercel.app') || 
+                                 window.location.hostname.includes('github.io') ||
+                                 window.location.hostname.includes('.app');
       
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
-      const result = await response.json();
-      
-      if (result.success) {
-        toast({
-          title: "Message Sent!",
-          description: result.message || "We'll get back to you within 24 hours.",
+      if (isStaticDeployment) {
+        // For static deployments: submit directly to Web3Forms
+        const formDataToSend = new FormData();
+        formDataToSend.append('access_key', 'db800c0e-da86-4fcb-a5c4-c7b57d61b742');
+        formDataToSend.append('name', formData.name);
+        formDataToSend.append('email', formData.email);
+        formDataToSend.append('company', formData.company);
+        formDataToSend.append('message', formData.message);
+        formDataToSend.append('from_name', 'The Unlock Website');
+        formDataToSend.append('subject', `New Contact Form Submission from ${formData.name} - ${formData.company}`);
+        formDataToSend.append('replyto', formData.email);
+        
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formDataToSend
         });
-        setFormData({ name: '', email: '', company: '', message: '' });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          toast({
+            title: "Message Sent!",
+            description: "We'll get back to you within 24 hours.",
+          });
+          setFormData({ name: '', email: '', company: '', message: '' });
+        } else {
+          throw new Error('Web3Forms submission failed');
+        }
       } else {
-        toast({
-          title: "Error",
-          description: result.message || "There was an issue sending your message. Please try again.",
-          variant: "destructive",
+        // For development (Replit): use backend API
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          toast({
+            title: "Message Sent!",
+            description: result.message || "We'll get back to you within 24 hours.",
+          });
+          setFormData({ name: '', email: '', company: '', message: '' });
+        } else {
+          toast({
+            title: "Error",
+            description: result.message || "There was an issue sending your message. Please try again.",
+            variant: "destructive",
+          });
+        }
       }
     } catch (error) {
       console.error('Form submission error:', error);
