@@ -44,7 +44,7 @@ const About = () => {
                 </p>
                 
                 <p>
-                  Here's what I learned after years in enterprise consulting: even large companies with massive budgets 
+                  Here's what we learned after years in enterprise consulting: even large companies with massive budgets 
                   were struggling to keep up with AI's pace. Traditional methodologies of comprehensive analysis weren't 
                   moving as fast as the technology itself. While teams were still analysing, AI capabilities were evolving, 
                   competitors were deploying, and opportunities were disappearing.
@@ -56,7 +56,7 @@ const About = () => {
                 </p>
                 
                 <p>
-                  That insight drove me to focus on building actual solutions. Businesses deserve working agents that deliver 
+                  That insight drove us to focus on building actual solutions. Businesses deserve working agents that deliver 
                   measurable efficiency gains, not more analysis paralysis.
                 </p>
                 
