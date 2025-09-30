@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import aboutImage from '@assets/74739962-7475-425d-9bda-bec1347715c5_1759215451567.png';
 
 const About = () => {
   return (
@@ -12,7 +11,7 @@ const About = () => {
             <Card className="overflow-hidden hover-elevate active-elevate-2 shadow-2xl max-w-lg mx-auto">
               <div className="relative">
                 <img 
-                  src={aboutImage} 
+                  src="/about-image.png" 
                   alt="AI transformation and business innovation" 
                   className="w-full h-[32rem] object-cover"
                   data-testid="img-about"
