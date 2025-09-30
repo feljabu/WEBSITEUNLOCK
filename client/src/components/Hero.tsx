@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import heroBackground from '@assets/38b4e378-d52a-4264-afa3-d5eb46e6ab07_1759215555342.png';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -14,7 +15,7 @@ const Hero = () => {
       id="hero" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(0, 121, 130, 0.6) 100%), url(/hero-background.png)`,
+        backgroundImage: `linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(0, 121, 130, 0.6) 100%), url(${heroBackground})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
