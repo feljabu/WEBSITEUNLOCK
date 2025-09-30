@@ -13,7 +13,7 @@ const About = () => {
                 <img 
                   src="/about-image.png" 
                   alt="AI transformation and business innovation" 
-                  className="w-full h-[32rem] object-cover"
+                  className="w-full h-[32rem] object-contain"
                   data-testid="img-about"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
