@@ -70,7 +70,7 @@ const Hero = () => {
             <span className="text-primary">•</span>
             <span>Team Empowerment</span>
             <span className="text-primary">•</span>
-            <span>Partnership Approach</span>
+            <span>Human Centric Approach</span>
           </div>
         </div>
       </div>
