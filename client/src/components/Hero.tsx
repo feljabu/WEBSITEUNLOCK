@@ -12,12 +12,9 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(0, 121, 130, 0.6) 100%), url(/hero-bg.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundImage: `linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(0, 121, 130, 0.6) 100%), url(/hero-bg.png)`
       }}
     >
       <div className="max-w-4xl mx-auto px-6 text-center text-white relative z-10 pt-28 md:pt-20">
