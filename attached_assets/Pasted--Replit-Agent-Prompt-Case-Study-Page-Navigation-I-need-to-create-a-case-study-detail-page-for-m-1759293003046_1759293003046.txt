@@ -1,0 +1,153 @@
+# Replit Agent Prompt: Case Study Page & Navigation
+
+I need to create a case study detail page for my existing Vite + Tailwind website AND update the navigation bar.
+
+## PART 1: UPDATE NAVIGATION BAR
+
+First, update my existing navigation bar:
+
+**Requirements:**
+1. Add a "Home" button that links to `/`
+2. Add a "Case Studies" dropdown menu
+3. The dropdown should list all available case studies
+4. For now, include one case study in the dropdown: "Xero - SHAX Agent" linking to `/case-studies/xero-behavioural-change`
+5. Keep my existing "Get In Touch" button that scrolls to `#contact`
+6. Match the existing navigation styling exactly
+
+The navigation should look like:
+```
+[Logo] | Home | Case Studies ▼ | [Get In Touch Button]
+                    └─ Xero - SHAX Agent
+```
+
+Make the dropdown appear on hover (desktop) and click (mobile).
+
+---
+
+## PART 2: CREATE CASE STUDY PAGE
+
+IMPORTANT: This component must be data-driven and reusable for multiple clients. All content should come from props/data, not hardcoded.
+
+Create a new file: `client/src/pages/CaseStudy.jsx`
+
+**Use this sample data for the Xero case study to build the component:**
+
+```json
+{
+  "client": {
+    "name": "Xero",
+    "logo": "/attached_assets/logos/xero-logo.png"
+  },
+  "title": "Xero Case Study",
+  "subtitle": "Behavioural Change Agent",
+  "hero": {
+    "image": "/attached_assets/case-studies/xero-hero.png"
+  },
+  "challenge": "Xero needed to transform James Clear's habit formation presentation into personalized application for 5,000 employees across their global organization. Traditional workshops would have required months of planning, significant resource allocation, and couldn't deliver personalized guidance at scale. Timeline: 3 weeks before their annual conference.",
+  "solution": "The Unlock built SHAX, an AI agent that brought Clear's principles directly into Xero's existing Slack environment. Rather than taking employees out of their workflow for training, SHAX delivered personalized habit formation coaching as naturally as chatting with a colleague. The agent translated complex behavioural science into contextual, actionable guidance tailored to each individual's role and goals.",
+  "implementation": "Achieved full deployment in 3 weeks through hybrid approach balancing speed with enterprise security requirements. Secure Slack integration, intuitive conversation flows requiring zero training, and immediate scalability across all departments. Solution designed for organic adoption rather than mandated rollout.",
+  "techStack": [
+    { "name": "Slack API", "icon": "/attached_assets/icons/slack.svg" },
+    { "name": "OpenAI", "icon": "/attached_assets/icons/openai.svg" },
+    { "name": "Python", "icon": "/attached_assets/icons/python.svg" },
+    { "name": "AWS Lambda", "icon": "/attached_assets/icons/aws.svg" }
+  ],
+  "results": [
+    "500+ meaningful conversations in first week (10% company engagement)",
+    "Eliminated costly workshop infrastructure while delivering superior personalization",
+    "Proved AI's value for employee experience at enterprise scale",
+    "Generated pipeline of additional AI agent opportunities across performance management",
+    "Demonstrated ROI through reduced training costs and increased application of conference content"
+  ],
+  "images": [
+    "/attached_assets/case-studies/xero-screenshot1.png",
+    "/attached_assets/case-studies/xero-screenshot2.png"
+  ],
+  "testimonial": {
+    "quote": "The Unlock quickly turned our vision into a working AI solution that delivered personalised guidance directly in our employees' workflow. Instead of resource-intensive workshops, we saw immediate engagement and practical application. This demonstrated how AI can enhance employee experience while reducing administrative overhead.",
+    "author": "Lucas Finch",
+    "position": "Head of Wellbeing",
+    "company": "Xero",
+    "photo": "/attached_assets/testimonials/lucas-finch.jpg"
+  }
+}
+```
+
+---
+
+## LAYOUT REQUIREMENTS:
+
+Design the case study page to match my existing website's style, color scheme, and design patterns. Use the same spacing, typography, and visual treatment you see in my current site.
+
+**Required Sections (in this order):**
+
+### 1. HERO SECTION
+- Display client logo, title, and subtitle on the left
+- Show hero image on the right (roughly 40% width)
+- Make it responsive (stack on mobile)
+
+### 2. CHALLENGE SECTION
+- "THE CHALLENGE" heading
+- Display the challenge paragraph
+- Add visual interest with an accent element (like a vertical line or decorative element)
+
+### 3. SOLUTION SECTION
+- "THE SOLUTION" heading
+- Display the solution paragraph
+- Use similar styling to the Challenge section
+
+### 4. IMPLEMENTATION SECTION *(conditional - only show if data exists)*
+- "IMPLEMENTATION" heading
+- Display the implementation paragraph
+- Match styling of previous sections
+
+### 5. TECH STACK SECTION
+- "TECH STACK" heading
+- Display tech stack items as icon badges in a row
+- Show icon + name for each technology
+- Make it responsive
+
+### 6. RESULTS & IMPACT SECTION
+- "RESULTS & IMPACT" heading
+- Display results as bullet points
+- Emphasize key metrics/numbers
+- Use multi-column layout on desktop, single column on mobile
+
+### 7. IMAGE CAROUSEL *(conditional - only show if images exist)*
+- Display images one at a time
+- Add prev/next navigation
+- Make images responsive
+
+### 8. TESTIMONIAL *(conditional - only show if testimonial exists)*
+- Display quote prominently
+- Show author name, position, and company
+- Include author photo if provided
+- Visually distinguish from other sections (background or border)
+
+### 9. CTA BUTTON
+- "Get In Touch" button
+- Links to `/#contact` on the landing page
+- Centered and prominent
+- Use my site's primary button style
+
+---
+
+## IMPORTANT TECHNICAL REQUIREMENTS:
+
+✅ **Match my existing design system** - Use the same colors, typography, spacing, and component styles you see in my current site  
+✅ **Make the component data-driven** - Accept all content as props so it's reusable for any client  
+✅ **Use conditional rendering** - Only show sections when data exists (implementation, images, testimonial)  
+✅ **Ensure responsive design** - Mobile-first approach  
+✅ **Navigation dropdown** - Should be accessible and work on both desktop and mobile  
+✅ **Use Tailwind CSS** - Stay consistent with my existing styling approach
+
+---
+
+## DELIVERABLES:
+
+1. Updated navigation bar with Home button and Case Studies dropdown
+2. New CaseStudy.jsx component that is fully reusable
+3. Route configuration to display the case study page at `/case-studies/xero-behavioural-change`
+4. The page should work with the sample Xero data provided
+
+**Key Goal:** Create a component that can be reused for ANY client case study by simply passing different data. The design should feel like a natural extension of my existing website.
