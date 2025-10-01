@@ -289,11 +289,11 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
               </h2>
               <Card className="overflow-hidden" data-testid="press-card">
                 <div className="grid md:grid-cols-2 gap-0">
-                  <div className="relative h-64 md:h-auto">
+                  <div className="relative">
                     <img 
                       src={data.press.image} 
                       alt={data.press.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-auto md:h-full md:object-cover"
                       data-testid="press-image"
                     />
                   </div>
