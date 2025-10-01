@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -48,6 +48,11 @@ interface CaseStudyProps {
 
 const CaseStudy = ({ data }: CaseStudyProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Scroll to top when case study page loads
+    window.scrollTo(0, 0);
+  }, []);
 
   const nextImage = () => {
     if (data.images) {
