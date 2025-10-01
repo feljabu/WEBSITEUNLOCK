@@ -4,7 +4,8 @@ const ElmoAgentIdCaseStudy = () => {
   const elmoAgentIdData = {
     client: {
       name: "ELMO",
-      logo: "/logos/elmo-logo.png"
+      logo: "/logos/elmo-logo.png",
+      logoSize: "h-14"
     },
     title: "Identifying High-Impact Agentic AI Opportunities",
     subtitle: "Strategic framework for selecting AI agent use cases that deliver measurable ROI and organisational buy-in",
