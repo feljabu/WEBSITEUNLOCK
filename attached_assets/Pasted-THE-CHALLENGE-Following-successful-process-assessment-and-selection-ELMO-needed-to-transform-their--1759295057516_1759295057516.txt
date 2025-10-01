@@ -1,0 +1,15 @@
+THE CHALLENGE
+Following successful process assessment and selection, ELMO needed to transform their highest-priority use case into a working AI agent that would deliver measurable value while building organizational confidence in AI capabilities. Initial team reaction was skepticism—"great, another tool"—until ELMO shifted from building FOR the SDRs to building WITH them. The challenge was developing an intelligent system that could automate complex research tasks while maintaining the quality and depth that users required for effective decision-making.
+THE SOLUTION
+The Unlock developed NALAH, an agentic AI system designed to autonomously research and analyze prospects by gathering intelligence from multiple sources. NALAH integrates with LinkedIn for professional insights, performs comprehensive web research, and leverages Perplexity to analyze current news and market trends. Built using n8n and Claude, this multi-source approach delivers comprehensive prospect intelligence that previously required hours of manual research.
+IMPLEMENTATION
+NALAH was built in 8 weeks from concept to launch. The agent was co-created with the SDR team, who became architects of their own workflow, defining what insights mattered and how they wanted to work. This collaborative approach transformed initial resistance into ownership. NALAH integrates directly into ELMO's existing workflows, operating autonomously and requiring minimal user input while delivering comprehensive research reports. The focus on co-design ensured the system enhanced rather than disrupted existing processes while maintaining data accuracy and relevance.
+RESULTS & IMPACT
+Perfect Adoption and Leadership Satisfaction
+
+100% user adoption rate across all intended users - unprecedented engagement
+Complete leadership satisfaction with agent performance and business impact
+57% time savings on research tasks - nearly 12 working days returned to each SDR annually
+35% efficiency gains while improving conversation quality and lead depth
+Autonomous intelligence gathering from LinkedIn, web sources, and current news via Perplexity
+Foundation established for scaling AI agent development across additional use cases

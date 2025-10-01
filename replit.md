@@ -2,6 +2,16 @@
 
 This is a professional AI consulting website for "The Unlock" - a company that specializes in transforming enterprise workflows through custom AI agents and intelligent automation. The website is built as a modern single-page application showcasing the company's services, methodology, team, and partnership approach. It features a polished design with professional branding in teal color schemes, targeting enterprise clients seeking AI transformation solutions.
 
+## Recent Updates (October 2025)
+
+- **Reusable Case Study System**: Fully reusable CaseStudy component with hero sections, challenge/solution/implementation content blocks, tech stack display, results grid, and testimonials
+- **Case Studies Implemented**:
+  - Xero SHAX: Behavioural Change Agent (habit formation coaching for 5,000 employees)
+  - ELMO NALAH: SDR Empowerment Agent (autonomous prospect research with 100% adoption)
+- **Navigation Enhancement**: Dropdown menu for case studies with fixed hover interaction
+- **Contact Form**: Functional form using Web3Forms (felipe@theunlock.com.au)
+- **Hero Section**: Updated title "Transform Your Workflows with AI Agents" with highlighted "Workflows"
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

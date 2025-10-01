@@ -38,6 +38,10 @@ const Header = () => {
     { 
       name: 'Xero - SHAX Agent', 
       path: '/case-studies/xero-behavioural-change'
+    },
+    { 
+      name: 'ELMO - NALAH Agent', 
+      path: '/case-studies/nalah-sdr-empowerment'
     }
   ];
 

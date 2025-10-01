@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import XeroCaseStudy from "@/pages/XeroCaseStudy";
+import NalahCaseStudy from "@/pages/NalahCaseStudy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/case-studies/xero-behavioural-change" component={XeroCaseStudy} />
+      <Route path="/case-studies/nalah-sdr-empowerment" component={NalahCaseStudy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
