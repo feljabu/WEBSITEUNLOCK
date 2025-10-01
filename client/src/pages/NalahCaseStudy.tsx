@@ -37,6 +37,13 @@ const NalahCaseStudy = () => {
       position: "Chief People Officer",
       company: "ELMO Software",
       photo: "/testimonials/kate-wilkinson.jpeg"
+    },
+    press: {
+      title: "Featured in HR Leader",
+      description: "Following this successful implementation, ELMO's CPO Kate Wilkinson published an article in HR Leader to share their human-centered AI approach with the broader HR community.",
+      image: "/case-studies/nalah-hr-leader-article.png",
+      link: "https://www.hrleader.com.au/business/27336-ai-at-elmo-putting-people-at-the-heart-of-transformation",
+      linkText: "Read the Full Article"
     }
   };
 

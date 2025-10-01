@@ -33,6 +33,13 @@ interface CaseStudyData {
     company: string;
     photo?: string;
   };
+  press?: {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    linkText: string;
+  };
 }
 
 interface CaseStudyProps {
@@ -268,8 +275,46 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
           </section>
         )}
 
+        {/* Press/Publication Section (Conditional) */}
+        {data.press && (
+          <section className="py-16 bg-muted/30">
+            <div className="max-w-4xl mx-auto px-6">
+              <h2 className="text-3xl font-bold mb-8 text-foreground text-center" data-testid="press-heading">
+                {data.press.title}
+              </h2>
+              <Card className="overflow-hidden" data-testid="press-card">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="relative h-64 md:h-auto">
+                    <img 
+                      src={data.press.image} 
+                      alt={data.press.title}
+                      className="w-full h-full object-cover"
+                      data-testid="press-image"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="press-description">
+                      {data.press.description}
+                    </p>
+                    <a 
+                      href={data.press.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      data-testid="press-link"
+                    >
+                      <Button variant="default" className="hover-elevate active-elevate-2">
+                        {data.press.linkText}
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </section>
+        )}
+
         {/* CTA Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-background">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-6 text-foreground">
               Ready to Transform Your Business?
