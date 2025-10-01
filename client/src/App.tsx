@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import XeroCaseStudy from "@/pages/XeroCaseStudy";
 import NalahCaseStudy from "@/pages/NalahCaseStudy";
+import ElmoAgentIdCaseStudy from "@/pages/ElmoAgentIdCaseStudy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/case-studies/xero-behavioural-change" component={XeroCaseStudy} />
       <Route path="/case-studies/nalah-sdr-empowerment" component={NalahCaseStudy} />
+      <Route path="/case-studies/elmo-agent-identification" component={ElmoAgentIdCaseStudy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

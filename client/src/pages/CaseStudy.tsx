@@ -20,7 +20,7 @@ interface CaseStudyData {
   challenge: string;
   solution: string;
   implementation?: string;
-  techStack: Array<{
+  techStack?: Array<{
     name: string;
     icon: string;
   }>;
@@ -39,6 +39,10 @@ interface CaseStudyData {
     image: string;
     link: string;
     linkText: string;
+  };
+  ctaLink?: {
+    text: string;
+    url: string;
   };
 }
 
@@ -163,25 +167,27 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
           </section>
         )}
 
-        {/* Tech Stack Section */}
-        <section className="py-12 md:py-16 bg-muted/30">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-foreground" data-testid="tech-stack-heading">
-              TECH STACK USED
-            </h2>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              {data.techStack.map((tech, index) => (
-                <div 
-                  key={index}
-                  className="hover-elevate rounded-lg p-3 md:p-4 bg-background/50 border border-primary/10"
-                  data-testid={`tech-${index}`}
-                >
-                  <img src={tech.icon} alt={tech.name} className="h-10 md:h-12 w-auto" />
-                </div>
-              ))}
+        {/* Tech Stack Section (Conditional) */}
+        {data.techStack && data.techStack.length > 0 && (
+          <section className="py-12 md:py-16 bg-muted/30">
+            <div className="max-w-4xl mx-auto px-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-foreground" data-testid="tech-stack-heading">
+                TECH STACK USED
+              </h2>
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                {data.techStack.map((tech, index) => (
+                  <div 
+                    key={index}
+                    className="hover-elevate rounded-lg p-3 md:p-4 bg-background/50 border border-primary/10"
+                    data-testid={`tech-${index}`}
+                  >
+                    <img src={tech.icon} alt={tech.name} className="h-10 md:h-12 w-auto" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Results & Impact Section */}
         <section className="py-12 md:py-16 bg-background">
@@ -205,6 +211,18 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
                 </div>
               ))}
             </div>
+            {/* CTA Link (Conditional) */}
+            {data.ctaLink && (
+              <div className="mt-8 text-center">
+                <a 
+                  href={data.ctaLink.url}
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold text-base md:text-lg transition-colors"
+                  data-testid="cta-link"
+                >
+                  {data.ctaLink.text}
+                </a>
+              </div>
+            )}
           </div>
         </section>
 

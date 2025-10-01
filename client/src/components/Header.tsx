@@ -42,6 +42,10 @@ const Header = () => {
     { 
       name: 'ELMO - NALAH Agent', 
       path: '/case-studies/nalah-sdr-empowerment'
+    },
+    { 
+      name: 'ELMO – Agent Identification', 
+      path: '/case-studies/elmo-agent-identification'
     }
   ];
 

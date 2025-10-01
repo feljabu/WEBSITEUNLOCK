@@ -4,11 +4,13 @@ This is a professional AI consulting website for "The Unlock" - a company that s
 
 ## Recent Updates (October 2025)
 
-- **Reusable Case Study System**: Fully reusable CaseStudy component with hero sections, challenge/solution/implementation content blocks, tech stack display, results grid, and testimonials
+- **Reusable Case Study System**: Fully reusable CaseStudy component with hero sections, challenge/solution/implementation content blocks, optional tech stack display, optional testimonials, optional press sections, and optional CTA links for cross-referencing case studies
+- **Mobile Responsiveness**: Comprehensive mobile optimization with responsive text sizes, flexible layouts (flex-col sm:flex-row), appropriate spacing (py-12 md:py-16), and proper image handling (h-auto on mobile to prevent cropping)
 - **Case Studies Implemented**:
   - Xero SHAX: Behavioural Change Agent (habit formation coaching for 5,000 employees)
-  - ELMO NALAH: SDR Empowerment Agent (autonomous prospect research with 100% adoption)
-- **Navigation Enhancement**: Dropdown menu for case studies with fixed hover interaction
+  - ELMO NALAH: SDR Empowerment Agent (autonomous prospect research with 100% adoption, HR Leader press coverage)
+  - ELMO Agent Identification: Strategic framework for selecting high-impact AI opportunities (links to NALAH case study)
+- **Navigation Enhancement**: Dropdown menu for case studies with fixed hover interaction and padding bridge solution
 - **Contact Form**: Functional form using Web3Forms (felipe@theunlock.com.au)
 - **Hero Section**: Updated title "Transform Your Workflows with AI Agents" with highlighted "Workflows"
 
