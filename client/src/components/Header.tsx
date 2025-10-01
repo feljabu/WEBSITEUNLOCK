@@ -22,9 +22,9 @@ const Header = () => {
     setIsMobileMenuOpen(false);
     setIsCaseStudiesOpen(false);
     
-    // If we're not on home page, navigate there first
+    // If we're not on home page, navigate there with hash
     if (location !== '/') {
-      setLocation(`/#${sectionId}`);
+      window.location.href = `/#${sectionId}`;
       return;
     }
     
