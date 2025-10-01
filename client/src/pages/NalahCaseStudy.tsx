@@ -32,7 +32,7 @@ const NalahCaseStudy = () => {
       "Foundation established for scaling AI agent development across additional use cases"
     ],
     testimonial: {
-      quote: "A massive thank you to Felipe Jara for demonstrating how we should be approaching all future Agentic AI initiatives. Watching this project evolve from concept to these stunning results has been a highlight this quarter. You've perfectly articulated a core belief for our organization: AI that is built WITH the user will always outperform AI that is simply built FOR the user.",
+      quote: "A massive thank you to Felipe Jara for demonstrating how we should be approaching all future Agentic AI initiatives. Watching this project evolve from concept to these stunning results has been a highlight this quarter. You've perfectly demonstrated a core belief for our organisation: AI that is built WITH the user will always outperform AI that is simply built FOR the user.",
       author: "Kate Wilkinson",
       position: "Chief People Officer",
       company: "ELMO Software",
