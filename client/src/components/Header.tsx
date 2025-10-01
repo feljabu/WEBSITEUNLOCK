@@ -104,19 +104,21 @@ const Header = () => {
               </button>
               
               <div 
-                className={`absolute top-full left-0 mt-2 bg-card border border-card-border rounded-md shadow-lg min-w-[200px] py-2 z-50 transition-opacity duration-200 ${isCaseStudiesOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+                className={`absolute top-full left-0 pt-2 transition-opacity duration-200 ${isCaseStudiesOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
               >
-                {caseStudies.map((study) => (
-                  <Link 
-                    key={study.path} 
-                    href={study.path}
-                    className="block w-full text-left px-4 py-2 text-card-foreground hover:bg-muted transition-colors duration-200"
-                    data-testid={`dropdown-${study.path}`}
-                    onClick={() => setIsCaseStudiesOpen(false)}
-                  >
-                    {study.name}
-                  </Link>
-                ))}
+                <div className="bg-card border border-card-border rounded-md shadow-lg min-w-[200px] py-2 z-50">
+                  {caseStudies.map((study) => (
+                    <Link 
+                      key={study.path} 
+                      href={study.path}
+                      className="block w-full text-left px-4 py-2 text-card-foreground hover:bg-muted transition-colors duration-200"
+                      data-testid={`dropdown-${study.path}`}
+                      onClick={() => setIsCaseStudiesOpen(false)}
+                    >
+                      {study.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 
