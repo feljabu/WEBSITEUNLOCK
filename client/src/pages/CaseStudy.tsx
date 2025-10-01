@@ -10,6 +10,7 @@ interface CaseStudyData {
   client: {
     name: string;
     logo: string;
+    logoSize?: string;
   };
   title: string;
   subtitle: string;
@@ -67,7 +68,7 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
                 <img 
                   src={data.client.logo} 
                   alt={`${data.client.name} logo`}
-                  className="h-20 mb-8"
+                  className={`${data.client.logoSize || 'h-20'} mb-8`}
                   data-testid="client-logo"
                 />
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground" data-testid="case-study-title">
