@@ -17,14 +17,13 @@ const XeroCaseStudy = () => {
     techStack: [
       { name: "Slack", icon: "/logos/slack-logo.png" },
       { name: "Google Cloud", icon: "/logos/google-cloud-logo.png" },
-      { name: "Gemini", icon: "/logos/gemini-logo.svg" },
+      { name: "Gemini", icon: "/logos/gemini-logo.png" },
       { name: "Dialogflow", icon: "/logos/dialogflow-logo.png" }
     ],
     results: [
       "500+ meaningful conversations in first week (10% company engagement)",
       "Eliminated costly workshop infrastructure while delivering superior personalization",
       "Proved AI's value for employee experience at enterprise scale",
-      "Generated pipeline of additional AI agent opportunities across performance management",
       "Demonstrated ROI through reduced training costs and increased application of conference content"
     ],
     testimonial: {
