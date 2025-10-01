@@ -141,6 +141,18 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed" data-testid="solution-text">
                   {data.solution}
                 </p>
+                {/* CTA Link after solution (Conditional) */}
+                {data.ctaLink && (
+                  <div className="mt-6">
+                    <a 
+                      href={data.ctaLink.url}
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold text-base md:text-lg transition-colors"
+                      data-testid="solution-cta-link"
+                    >
+                      {data.ctaLink.text}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -211,18 +223,6 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
                 </div>
               ))}
             </div>
-            {/* CTA Link (Conditional) */}
-            {data.ctaLink && (
-              <div className="mt-8 text-center">
-                <a 
-                  href={data.ctaLink.url}
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold text-base md:text-lg transition-colors"
-                  data-testid="cta-link"
-                >
-                  {data.ctaLink.text}
-                </a>
-              </div>
-            )}
           </div>
         </section>
 
