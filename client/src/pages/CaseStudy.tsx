@@ -57,9 +57,9 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="pt-24">
+      <main>
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
+        <section className="pt-24 pb-20 bg-gradient-to-br from-primary/20 via-primary/15 to-background">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-[1fr,auto] gap-12 items-center">
               {/* Left: Client Info */}
@@ -156,17 +156,15 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
             <h2 className="text-3xl font-bold mb-8 text-center text-foreground" data-testid="tech-stack-heading">
               TECH STACK USED
             </h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6">
               {data.techStack.map((tech, index) => (
-                <Badge 
+                <div 
                   key={index}
-                  variant="outline" 
-                  className="px-4 py-3 text-base border-primary/20"
+                  className="hover-elevate rounded-lg p-4 bg-background/50 border border-primary/10"
                   data-testid={`tech-${index}`}
                 >
-                  <img src={tech.icon} alt={tech.name} className="w-5 h-5 mr-2" />
-                  {tech.name}
-                </Badge>
+                  <img src={tech.icon} alt={tech.name} className="h-12 w-auto" />
+                </div>
               ))}
             </div>
           </div>
