@@ -73,6 +73,22 @@ const Header = () => {
               Home
             </Link>
 
+            <button
+              onClick={() => scrollToSection('process')}
+              className="text-primary-foreground hover:text-primary transition-colors duration-300 font-medium hover-elevate px-3 py-2 rounded-md"
+              data-testid="nav-how-we-work"
+            >
+              How we Work
+            </button>
+
+            <button
+              onClick={() => scrollToSection('team')}
+              className="text-primary-foreground hover:text-primary transition-colors duration-300 font-medium hover-elevate px-3 py-2 rounded-md"
+              data-testid="nav-our-team"
+            >
+              Our Team
+            </button>
+
             {/* Case Studies Dropdown */}
             <div 
               className="relative"
@@ -137,6 +153,22 @@ const Header = () => {
               >
                 Home
               </Link>
+
+              <button
+                onClick={() => scrollToSection('process')}
+                className="w-full text-primary-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2 px-4 rounded-md hover-elevate"
+                data-testid="mobile-nav-how-we-work"
+              >
+                How we Work
+              </button>
+
+              <button
+                onClick={() => scrollToSection('team')}
+                className="w-full text-primary-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2 px-4 rounded-md hover-elevate"
+                data-testid="mobile-nav-our-team"
+              >
+                Our Team
+              </button>
 
               {/* Mobile Case Studies Section */}
               <div>
