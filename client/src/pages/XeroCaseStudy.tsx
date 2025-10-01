@@ -27,7 +27,7 @@ const XeroCaseStudy = () => {
       "Demonstrated ROI through reduced training costs and increased application of conference content"
     ],
     testimonial: {
-      quote: "The Unlock quickly turned our vision into a working AI solution that delivered personalised guidance directly in our employees' workflow. Instead of resource-intensive workshops, we saw immediate engagement and practical application. This demonstrated how AI can enhance employee experience while reducing administrative overhead.",
+      quote: "Felipe quickly turned our vision into a working AI solution that delivered personalised guidance directly in our employees' workflow. Instead of resource-intensive workshops, we saw immediate engagement and practical application. This demonstrated how AI can enhance employee experience while reducing administrative overhead.",
       author: "Lucas Finch",
       position: "Head of Wellbeing",
       company: "Xero",
