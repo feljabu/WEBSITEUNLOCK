@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check, Target, Lightbulb, Settings } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -59,7 +59,7 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
       
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="py-16 bg-muted/50">
+        <section className="py-20 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-[1fr,auto] gap-12 items-center">
               {/* Left: Client Info */}
@@ -67,7 +67,7 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
                 <img 
                   src={data.client.logo} 
                   alt={`${data.client.name} logo`}
-                  className="h-16 mb-6"
+                  className="h-20 mb-8"
                   data-testid="client-logo"
                 />
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground" data-testid="case-study-title">
@@ -79,7 +79,7 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
               </div>
 
               {/* Right: Hero Image */}
-              <div className="lg:w-[400px]">
+              <div className="lg:w-[450px]">
                 <img 
                   src={data.hero.image} 
                   alt={data.title}
@@ -95,7 +95,9 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
         <section className="py-16 bg-background">
           <div className="max-w-4xl mx-auto px-6">
             <div className="flex gap-6">
-              <div className="w-1 bg-primary rounded-full" />
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <Target className="text-primary" size={24} />
+              </div>
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-foreground" data-testid="challenge-heading">
                   THE CHALLENGE
@@ -112,7 +114,9 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
         <section className="py-16 bg-muted/30">
           <div className="max-w-4xl mx-auto px-6">
             <div className="flex gap-6">
-              <div className="w-1 bg-primary rounded-full" />
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <Lightbulb className="text-primary" size={24} />
+              </div>
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-foreground" data-testid="solution-heading">
                   THE SOLUTION
@@ -130,7 +134,9 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
           <section className="py-16 bg-background">
             <div className="max-w-4xl mx-auto px-6">
               <div className="flex gap-6">
-                <div className="w-1 bg-primary rounded-full" />
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Settings className="text-primary" size={24} />
+                </div>
                 <div>
                   <h2 className="text-3xl font-bold mb-6 text-foreground" data-testid="implementation-heading">
                     IMPLEMENTATION
@@ -148,7 +154,7 @@ const CaseStudy = ({ data }: CaseStudyProps) => {
         <section className="py-16 bg-muted/30">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-8 text-center text-foreground" data-testid="tech-stack-heading">
-              TECH STACK
+              TECH STACK USED
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               {data.techStack.map((tech, index) => (
